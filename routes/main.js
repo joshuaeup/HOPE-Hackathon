@@ -1,26 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const data = require("../data.json");
-const nodemailer = require("nodemailer");
-const credentials = require("../config/pass");
 
-// Create mail profile using smtp gmail server
-const profile = {
-    host: "smtp.gmail.com",
-    auth: {
-        // Enter login credentials into authentication object
-        user: credentials.USER,
-        pass: credentials.PASS,
-    },
-};
-// Create email transporter using nodemailer
-const transporter = nodemailer.createTransport(profile);
-
-// Verify is active without error
-transporter.verify((err, res) => {
-    if (err) console.log(err);
-    else console.log("Mail Server running");
-});
+const transporter = require("../config/transporter");
 
 // Home route
 router.get("/", (req, res) => {
@@ -41,12 +23,20 @@ router.get("/:object", (req, res) => {
 router.post("/:object", (req, res) => {
     const item = req.params.object;
     const email = req.body.email;
-
+    let formattedText = "Here are your helpful tips! ";
+    // Loop through selected data then append object values within template literal
+    for (let i = 0; i < data[item].length; i++) {
+        let number = i + 1;
+        formattedText += `
+        ${number}. ${data[item][i].title}
+        ${data[item][i].info}
+        `;
+    }
     const mail = {
         from: "Hope",
         to: email,
         subject: `Tips related to your ${item.toString()}`,
-        text: data[item][0].title,
+        text: formattedText,
     };
 
     // Send email with mail object passed in then check for success
@@ -58,7 +48,7 @@ router.post("/:object", (req, res) => {
         }
     });
 
-    res.render("home");
+    res.send(formattedText);
 });
 
 module.exports = router;
