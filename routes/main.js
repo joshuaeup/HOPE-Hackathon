@@ -1,14 +1,55 @@
 const express = require("express");
 const router = express.Router();
 const data = require("../data.json");
-
+// Transporter configurations
 const transporter = require("../config/transporter");
+
+const request = require("request");
+const { json } = require("body-parser");
+const apiKey = "decf8780916542018d312ec3ef91935b";
 
 // Home route
 router.get("/", (req, res) => {
     res.render("home");
 });
 
+router.get("/api", (req, res) => {
+    res.send(data);
+});
+
+// Window has a higher specificity to run this code on the window route instead of the :object route
+router.get("/window", (req, res) => {
+    // API info
+    const city = "Charlotte";
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
+    // Request API data then render API and Data object
+    request(url, (err, response, body) => {
+        if (err) {
+            res.render("windowInfo", {
+                weather: null,
+                error: "Cannot be found",
+            });
+        } else {
+            let weather = JSON.parse(body);
+            if (weather.main == undefined)
+                res.render("windowInfo", {
+                    weather: null,
+                    error: "No weather data",
+                });
+
+            let weatherText = weather.main.temp;
+            console.log(weatherText);
+            res.render("windowInfo", {
+                weather: weatherText,
+                data: data.window,
+                error: null,
+            });
+        }
+    });
+});
+
+// Retrieves data from param if exist
 router.get("/:object", (req, res) => {
     const item = req.params.object;
     // check if req exists
@@ -20,6 +61,7 @@ router.get("/:object", (req, res) => {
     res.render("info", { data: data[item] });
 });
 
+// Post method for email
 router.post("/:object", (req, res) => {
     const item = req.params.object;
     const email = req.body.email;
@@ -48,6 +90,7 @@ router.post("/:object", (req, res) => {
         }
     });
 
+    // Render message
     res.send(formattedText);
 });
 
