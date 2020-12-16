@@ -8,6 +8,8 @@
     <body>
         <h1>The current Temperature is <%= weather %></h1>
 
+        <img src="<%= gif %>" alt="gif" />
+
         <% for(let i = 0; i < data.length; i++) { %>
         <h1><%= data[i].title %></h1>
         <h4><%= data[i].info %></h4>
