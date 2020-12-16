@@ -1,0 +1,130 @@
+{
+    "phone": [
+        {
+            "title": "Step away from phone",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Other",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Step away from phone",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "desk": [
+        {
+            "title": "Step away from your desk",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Step away from your desk",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "fan": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "window": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "computer": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "guitar": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "food": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "tea": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "plant": [
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Fan makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "pets": [
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ]
+}
