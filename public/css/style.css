@@ -1,14 +1,21 @@
 * {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
+
 #background {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 img[usemap],
 map area {
-    outline: none;
+  outline: none;
 }
+
+h1 {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
