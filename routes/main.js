@@ -12,7 +12,7 @@ const gifIndex = gifLimit - 1;
 
 // Home route
 router.get("/", (req, res) => {
-    res.render("landing");
+    res.render("home");
 });
 
 router.get("/api", (req, res) => {
