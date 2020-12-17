@@ -4,7 +4,7 @@ const credentials = require("./pass");
 
 // Create mail profile using smtp gmail server
 const profile = {
-    host: "smtp.gmail.com",
+    host: "smtp.gmail.com", //Simple mail transfer protocol (Server google owns takes smpt request) Ask google to send email for me.
     auth: {
         // Enter login credentials into authentication object
         user: credentials.USER,

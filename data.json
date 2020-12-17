@@ -13,16 +13,6 @@
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
         }
     ],
-    "desk": [
-        {
-            "title": "Step away from your desk",
-            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
-        },
-        {
-            "title": "Step away from your desk",
-            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
-        }
-    ],
     "fan": [
         {
             "title": "Fan makes everything cool",
@@ -57,7 +47,7 @@
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
         }
     ],
-    "guitar": [
+    "music": [
         {
             "title": "Fan makes everything cool",
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
@@ -99,7 +89,7 @@
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
         }
     ],
-    "plant": [
+    "plants": [
         {
             "title": "Fan makes everything cool",
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
@@ -113,7 +103,63 @@
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
         }
     ],
-    "pets": [
+    "animals": [
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "books": [
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "drawing": [
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "food": [
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        },
+        {
+            "title": "Pets makes everything cool",
+            "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
+        }
+    ],
+    "bed": [
         {
             "title": "Pets makes everything cool",
             "info": "Steeping away from your device can help you concentrate, and feel more relaxed"
