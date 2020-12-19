@@ -1,0 +1,107 @@
+$theme-colors: (
+    "border": #ffffff,
+    "background": #fbfbfd,
+    "hr": gray,
+    "title": #418a99,
+    "text": #212122,
+    "column": #f0f0f0,
+);
+
+#info-body {
+    // background-color: #ccb6d0;
+    background: map-get($map: $theme-colors, $key: background);
+    background-size: cover;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: auto;
+
+    #info-header {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        height: 8vh;
+        background-color: map-get($map: $theme-colors, $key: headBody);
+        color: map-get($map: $theme-colors, $key: title);
+        align-items: center;
+        padding: 0 2rem;
+        font-size: 1.5rem;
+
+        .header-col__logo {
+            text-align: left;
+        }
+
+        .header-col__back {
+            text-align: right;
+
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: map-get($map: $theme-colors, $key: title);
+            }
+        }
+    }
+
+    #info-main {
+        padding: 3rem 3rem 3rem 3rem;
+        color: map-get($map: $theme-colors, $key: title);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        height: 100%;
+        // min-height: 40vh;
+
+        .gif-container {
+            display: grid;
+            align-items: center;
+            height: 40vh;
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+
+            #gif {
+                height: 100%;
+                width: auto;
+                border-radius: 3rem;
+            }
+        }
+
+        .text-container {
+            margin-top: 2rem;
+            height: 100%;
+            width: 100%;
+            grid-column: 1/3;
+
+            .text-container__grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                justify-items: center;
+
+                .text-body {
+                    padding: 1rem 3rem;
+                    background-color: map-get(
+                        $map: $theme-colors,
+                        $key: column
+                    );
+                    border-radius: 3rem;
+                }
+
+                #text-container__main-title {
+                    font-size: 3rem;
+                    text-align: center;
+                    grid-column: 1/3;
+                }
+                .text-container__title {
+                    font-size: 2.2rem;
+                }
+
+                .text-container__text {
+                    font-size: 1.8rem;
+                    color: map-get($map: $theme-colors, $key: text);
+                }
+            }
+        }
+    }
+}
