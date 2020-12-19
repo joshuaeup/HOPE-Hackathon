@@ -120,6 +120,7 @@ router.post("/portal/:object", (req, res) => {
         const item = req.params.object;
         const email = req.body.email;
         let formattedText = "Here are your helpful tips! ";
+        console.log(item);
         // Loop through selected data then append object values within template literal
         for (let i = 0; i < data[item].length; i++) {
             let number = i + 1;
@@ -145,7 +146,7 @@ router.post("/portal/:object", (req, res) => {
         });
 
         // Render message
-        res.send(formattedText);
+        // res.render("info");
     } catch (err) {
         console.log(err);
     }

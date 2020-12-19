@@ -311,7 +311,7 @@ map area {
   height: 100%;
   width: 60%;
   border-radius: 3rem;
-  background-color: white;
+  background-color: #ecf4fa;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -322,15 +322,18 @@ map area {
   /* Link is a state of the button. use pseudo classes for special states of a selector  */
 }
 #info-body #info-main #form-container div #form h2 {
+  text-align: center;
   text-transform: capitalize;
+  margin: 1rem 0;
 }
 #info-body #info-main #form-container div #form input {
   font-family: FontAwesome;
   display: inline-block;
   width: 70%;
   font-size: 1.3rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 0.5rem;
+  border-radius: 3rem;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -349,6 +352,8 @@ map area {
   transition: all 0.2s;
   cursor: pointer;
   border: 1px solid gray;
+  width: 40%;
+  font-size: 1rem;
 }
 #info-body #info-main #form-container div #form .btn:hover {
   /* On hover of this button move the position up 3px  */
@@ -375,7 +380,6 @@ map area {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  align-items: center;
   height: 100%;
   width: auto;
   justify-items: center;
@@ -394,6 +398,7 @@ map area {
 }
 #info-body #info-main .text-container .text-container__grid .text-container__title {
   font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 #info-body #info-main .text-container .text-container__grid .text-container__text {
   font-size: 1.8rem;

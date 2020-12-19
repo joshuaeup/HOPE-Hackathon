@@ -62,7 +62,23 @@
     "drawing": [
         {
             "title": "Artistic expression",
-            "info": "While art therapy is its own field, you can also use self-directed art to express your creative side, reduce stress, and get in touch with your feelings. Most of us understood the power of art instinctively as kids: Virtually all children know the joys of sculpting something with play-dough, painting something with fingers, or drawing with crayons and other materials. Other than making random doodles in the margins of a page, if you’re like most adults, you probably don’t express yourself with art as you did when you were a kid. You may not think you're any 'good' at creating art, or you may not think it's worth your time, but art is actually a valuable pastime. There are many reasons that art is a great stress relief tool, even for those who don't consider themselves artistically inclined. Sometimes, with all of life’s responsibilities, we forget that we need and deserve downtime and self-care. Taking even a few minutes on a regular basis to devote to a hobby can give you more of what you need in this area. With art, you have the additional benefit of being left with something beautiful (or at least interesting) to show for it. 10:37 Some psychologists describe flow as becoming deeply engrossed in an activity. Similar to meditation, flow can improve performance and lower stress levels.2 You may experience flow when you’re practicing an instrument, playing a sport, gardening, writing, painting, or drawing. Creating art can take your mind off of whatever is stressing you, at least for a few minutes. It's difficult to keep ruminating on your problems when you're focused on creating. If your problems stay with you, you can incorporate them into your creations. Once you're done, you should have a clearer head with which to tackle your problems again."
+            "info": "While art therapy is its own field, you can also use self-directed art to express your creative side, reduce stress, and get in touch with your feelings."
+        },
+        {
+            "title": "Back To Basics",
+            "info": "Most of us understood the power of art instinctively as kids: Virtually all children know the joys of sculpting something with play-dough, painting something with fingers, or drawing with crayons and other materials. You may not think you're any 'good' at creating art, or you may not think it's worth your time, but art is actually a valuable pastime."
+        },
+        {
+            "title": "Stress Relief",
+            "info": "There are many reasons that art is a great stress relief tool, even for those who don't consider themselves artistically inclined. Sometimes, with all of life’s responsibilities, we forget that we need and deserve downtime and self-care. Taking even a few minutes on a regular basis to devote to a hobby can give you more of what you need in this area. With art, you have the additional benefit of being left with something beautiful (or at least interesting) to show for it."
+        },
+        {
+            "title": "Identifying Flow",
+            "info": "Some psychologists describe flow as becoming deeply engrossed in an activity. Similar to meditation, flow can improve performance and lower stress levels.2 You may experience flow when you’re practicing an instrument, playing a sport, gardening, writing, painting, or drawing. "
+        },
+        {
+            "title": "Clear Your Mind",
+            "info": "Creating art can take your mind off of whatever is stressing you, at least for a few minutes. It's difficult to keep ruminating on your problems when you're focused on creating. If your problems stay with you, you can incorporate them into your creations. Once you're done, you should have a clearer head with which to tackle your problems again."
         }
     ],
     "bed": [

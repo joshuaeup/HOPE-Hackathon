@@ -23,10 +23,10 @@
                 </article>
                 <article id="form-container">
                     <div>
-                        <form id="form">
-                        <h2>Would you like an emailed list?</h2>
-                        <input placeholder="What's Your Email?" />
-                        <button href="#" class="btn btn-white">Send Email</button>
+                        <form method="POST" id="form" action="/portal/<%= title.toLowerCase() %>">
+                        <h2>Would you like an emailed list of these tips?</h2>
+                        <input type="email" name="email" placeholder="What's Your Email?" id="input" />
+                        <input type="submit" value="Submit" id="submitBtn" class="btn btn-white" />
                     </form>
                     </div>
                 </article>
@@ -97,9 +97,8 @@
                 </div>
             </div>
         </footer>
-        <script
-            src="https://kit.fontawesome.com/3cf526719d.js"
-            crossorigin="anonymous"
-        ></script>
+        <script src="/js/info.js"></script>
+        <script src="https://kit.fontawesome.com/3cf526719d.js"
+            crossorigin="anonymous"></script>
     </body>
 </html>
