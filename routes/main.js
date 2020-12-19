@@ -15,12 +15,17 @@ router.get("/", (req, res) => {
     res.render("landing");
 });
 
+//portal
+router.get("/portal", (req, res) => {
+    res.render("home");
+});
+
 router.get("/api", (req, res) => {
     res.send(data);
 });
 
 // Window has a higher specificity to run this code on the window route instead of the :object route
-router.get("/window", (req, res) => {
+router.get("/portal/window", (req, res) => {
     try {
         // API info
         const city = "Charlotte";
@@ -72,7 +77,7 @@ router.get("/window", (req, res) => {
 });
 
 // Retrieves data from param if exist
-router.get("/:object", (req, res) => {
+router.get("/portal/:object", (req, res) => {
     try {
         const item = req.params.object;
 
@@ -103,7 +108,7 @@ router.get("/:object", (req, res) => {
 });
 
 // Post method for email
-router.post("/:object", (req, res) => {
+router.post("/portal/:object", (req, res) => {
     try {
         const item = req.params.object;
         const email = req.body.email;
