@@ -1,14 +1,14 @@
 $theme-colors: (
-    "border": #ffffff,
-    "background": #fbfbfd,
+    "nav": #2b2b2b,
+    "background": #ffffff,
     "hr": gray,
     "title": #418a99,
     "text": #212122,
-    "column": #f0f0f0,
+    "column": #ecf4fa,
+    "banner": #bb91ff,
 );
 
 #info-body {
-    // background-color: #ccb6d0;
     background: map-get($map: $theme-colors, $key: background);
     background-size: cover;
     background-attachment: fixed;
@@ -19,12 +19,12 @@ $theme-colors: (
     #info-header {
         display: grid;
         grid-template-columns: 4fr 1fr;
-        height: 8vh;
-        background-color: map-get($map: $theme-colors, $key: headBody);
-        color: map-get($map: $theme-colors, $key: title);
+        height: 6vh;
+        background-color: map-get($map: $theme-colors, $key: nav);
+        color: white;
         align-items: center;
         padding: 0 2rem;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
 
         .header-col__logo {
             text-align: left;
@@ -34,21 +34,35 @@ $theme-colors: (
             text-align: right;
 
             a {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 text-decoration: none;
-                color: map-get($map: $theme-colors, $key: title);
+                color: white;
             }
         }
     }
 
     #info-main {
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 0 0 3rem 0;
         color: map-get($map: $theme-colors, $key: title);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         align-items: center;
         height: 100%;
-        // min-height: 40vh;
+
+        #info-main__column {
+            // background-color: map-get($map: $theme-colors, $key: banner);
+            // background: map-get($map: $theme-colors, $key: nav);
+            background: linear-gradient(rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.3)),
+                url("https://wallpaperaccess.com/full/647810.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            width: 100%;
+        }
 
         .gif-container {
             display: grid;
@@ -65,6 +79,80 @@ $theme-colors: (
             }
         }
 
+        #form-container {
+            display: grid;
+            align-items: center;
+            height: 40vh;
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+
+            div {
+                height: 100%;
+                width: 60%;
+                border-radius: 3rem;
+                background-color: white;
+                display: grid;
+                justify-items: center;
+                align-items: center;
+
+                #form {
+                    display: grid;
+                    justify-items: center;
+                    h2 {
+                        text-transform: capitalize;
+                    }
+
+                    input {
+                        font-family: FontAwesome;
+                        display: inline-block;
+                        width: 70%;
+                        font-size: 1.3rem;
+                        margin: 2rem 0;
+                        padding: 0.5rem;
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                        border-bottom: 1px rgb(189, 189, 189) solid;
+                        text-align: center;
+                    }
+
+                    /* Link is a state of the button. use pseudo classes for special states of a selector  */
+                    .btn:link,
+                    .btn:visited,
+                    .btn {
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        padding: 15px 40px;
+                        display: inline-block;
+                        border-radius: 100px;
+                        /* By specifying transition: all .2s; you are stating that for all the transitions of class btn apply a .2s delay to display a smooth transition  */
+                        transition: all 0.2s;
+                        cursor: pointer;
+                        border: 1px solid gray;
+                    }
+
+                    .btn:hover {
+                        /* On hover of this button move the position up 3px  */
+                        /* box shadow: top/bottom | left/right | blur | color(black with a .2 opacity)  */
+                        transform: translateY(-3px);
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .btn:active {
+                        /* On click of this button move the position up 1px therefore down -2px  */
+                        transform: translateY(-1px);
+                        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .btn-white {
+                        background-color: #fff;
+                        color: #777;
+                    }
+                }
+            }
+        }
+
         .text-container {
             margin-top: 2rem;
             height: 100%;
@@ -73,19 +161,24 @@ $theme-colors: (
 
             .text-container__grid {
                 display: grid;
+                // grid-template-columns: 1fr;
                 grid-template-columns: 1fr 1fr;
+                width: 100%;
                 align-items: center;
                 height: 100%;
-                width: 100%;
+                width: auto;
                 justify-items: center;
+                margin: 0 5rem;
 
                 .text-body {
+                    margin: 2rem;
                     padding: 1rem 3rem;
                     background-color: map-get(
                         $map: $theme-colors,
                         $key: column
                     );
                     border-radius: 3rem;
+                    // grid-column: 1/3;
                 }
 
                 #text-container__main-title {

@@ -9,7 +9,7 @@
     <body id="info-body" class="overflow">
         <header id="info-header">
             <div class="header-col__logo">
-                <h1>Tea</h1>
+                <h1><%= title %></h1>
             </div>
 
             <div class="header-col__back">
@@ -17,12 +17,21 @@
             </div>
         </header>
         <main id="info-main">
-            <article class="gif-container">
-                <img id="gif" src="<%= gif %>" alt="gif" />
-            </article>
-            <article class="gif-container">
-                <img id="gif" src="<%= gif %>" alt="gif" />
-            </article>
+            <div id="info-main__column">
+                <article class="gif-container">
+                    <img id="gif" src="<%= gif %>" alt="gif" />
+                </article>
+                <article id="form-container">
+                    <div>
+                        <form id="form">
+                        <h2>Would you like an emailed list?</h2>
+                        <input placeholder="What's Your Email?" />
+                        <button href="#" class="btn btn-white">Send Email</button>
+                    </form>
+                    </div>
+                </article>
+            </div>
+            
             <article class="text-container">
                 <div class="text-container__grid">
                     <h3 id="text-container__main-title">Helpful Tips</h3>

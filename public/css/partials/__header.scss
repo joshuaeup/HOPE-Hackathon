@@ -1,0 +1,79 @@
+*{
+    overflow: inherit;
+    display: grid;
+}
+
+#landing-header{
+    background-image: url("../images/testAnimated.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin-left: 5px;
+    width: 100vw;
+
+}
+
+#landing-body{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    margin-left: 5px;
+    .landing-body__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 50vh;
+}
+    .landing-body__container__reverse{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 50vh;
+        img:nth-of-type(1){
+            order: 2;
+        }
+        p:nth-of-type(1){
+            order: 1;
+        }
+    }
+}
+
+.img-1{
+    border: black 6px solid;
+    height: 100%;
+    width: auto;
+
+}
+
+.img-2{
+    border: hotpink 2px solid;
+    height: 100%;
+    width: auto;
+}
+
+.img-3{
+    border: indigo 2px solid;
+    height: 100%;
+    width: auto;
+}
+
+.txt-right{
+    border: black 6px solid;
+    padding: 160px;
+    text-align: center;
+    background-color: green;
+}
+
+.txt-left{
+    border: red 2px solid;
+    text-align: center;
+    padding: 160px;
+    background-color: hotpink;
+}
+
+.button{
+    border: none;
+    color: yellow;
+    cursor: pointer;
+    text-align: center;
+}
+
+// background-image: linear-gradient(color1, color2), url(“”));

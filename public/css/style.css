@@ -240,7 +240,7 @@ map area {
 }
 
 #info-body {
-  background: #fbfbfd;
+  background: #ffffff;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -249,11 +249,12 @@ map area {
 #info-body #info-header {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  height: 8vh;
-  color: #418a99;
+  height: 6vh;
+  background-color: #2b2b2b;
+  color: white;
   align-items: center;
   padding: 0 2rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 #info-body #info-header .header-col__logo {
   text-align: left;
@@ -262,17 +263,28 @@ map area {
   text-align: right;
 }
 #info-body #info-header .header-col__back a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #418a99;
+  color: white;
 }
 #info-body #info-main {
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 0 0 3rem 0;
   color: #418a99;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   height: 100%;
+}
+#info-body #info-main #info-main__column {
+  background: linear-gradient(rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.3)), url("https://wallpaperaccess.com/full/647810.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
 }
 #info-body #info-main .gif-container {
   display: grid;
@@ -287,6 +299,72 @@ map area {
   width: auto;
   border-radius: 3rem;
 }
+#info-body #info-main #form-container {
+  display: grid;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+#info-body #info-main #form-container div {
+  height: 100%;
+  width: 60%;
+  border-radius: 3rem;
+  background-color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+#info-body #info-main #form-container div #form {
+  display: grid;
+  justify-items: center;
+  /* Link is a state of the button. use pseudo classes for special states of a selector  */
+}
+#info-body #info-main #form-container div #form h2 {
+  text-transform: capitalize;
+}
+#info-body #info-main #form-container div #form input {
+  font-family: FontAwesome;
+  display: inline-block;
+  width: 70%;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  padding: 0.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px #bdbdbd solid;
+  text-align: center;
+}
+#info-body #info-main #form-container div #form .btn:link,
+#info-body #info-main #form-container div #form .btn:visited,
+#info-body #info-main #form-container div #form .btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  /* By specifying transition: all .2s; you are stating that for all the transitions of class btn apply a .2s delay to display a smooth transition  */
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+#info-body #info-main #form-container div #form .btn:hover {
+  /* On hover of this button move the position up 3px  */
+  /* box shadow: top/bottom | left/right | blur | color(black with a .2 opacity)  */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#info-body #info-main #form-container div #form .btn:active {
+  /* On click of this button move the position up 1px therefore down -2px  */
+  transform: translateY(-1px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+#info-body #info-main #form-container div #form .btn-white {
+  background-color: #fff;
+  color: #777;
+}
 #info-body #info-main .text-container {
   margin-top: 2rem;
   height: 100%;
@@ -296,14 +374,17 @@ map area {
 #info-body #info-main .text-container .text-container__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: auto;
   justify-items: center;
+  margin: 0 5rem;
 }
 #info-body #info-main .text-container .text-container__grid .text-body {
+  margin: 2rem;
   padding: 1rem 3rem;
-  background-color: #f0f0f0;
+  background-color: #ecf4fa;
   border-radius: 3rem;
 }
 #info-body #info-main .text-container .text-container__grid #text-container__main-title {

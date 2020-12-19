@@ -37,6 +37,7 @@ router.get("/portal/window", (req, res) => {
                 res.render("windowInfo", {
                     weather: null,
                     error: "Cannot be found",
+                    title: "Window",
                 });
             } else {
                 let weather = JSON.parse(body);
@@ -98,7 +99,13 @@ router.get("/portal/:object", (req, res) => {
                     const gif = JSON.parse(body).data[gifIndex].images.original
                         .url;
                     // Send result to page
-                    res.render("info", { data: data[item], gif: gif });
+                    res.render("info", {
+                        data: data[item],
+                        gif: gif,
+                        title:
+                            item.charAt(0).toUpperCase() +
+                            item.slice(1, item.length),
+                    });
                 }
             }
         );
