@@ -88,6 +88,15 @@ router.get("/portal/:object", (req, res) => {
             return res.status(404).send("Object cannot be found");
         }
 
+        const amount = data[item].length;
+        let format = "";
+
+        if (amount > 1) {
+            format = "text-container__grid__dual";
+        } else {
+            format = "text-container__grid__single";
+        }
+
         request(
             `http://api.giphy.com/v1/gifs/search?q=${item}&limit=${gifLimit}&api_key=${gifApiKey}`,
             (err, response, body) => {
@@ -105,6 +114,7 @@ router.get("/portal/:object", (req, res) => {
                         title:
                             item.charAt(0).toUpperCase() +
                             item.slice(1, item.length),
+                        format: format,
                     });
                 }
             }
