@@ -394,10 +394,16 @@ map area {
   border-radius: 3rem;
 }
 #info-body #info-main .text-container .text-container__grid__dual #text-container__main-title,
-#info-body #info-main .text-container .text-container__grid__single #text-container__main-title {
+#info-body #info-main .text-container .text-container__grid__dual #weatherText,
+#info-body #info-main .text-container .text-container__grid__single #text-container__main-title,
+#info-body #info-main .text-container .text-container__grid__single #weatherText {
   font-size: 3rem;
   text-align: center;
   grid-column: 1/3;
+}
+#info-body #info-main .text-container .text-container__grid__dual #weatherText,
+#info-body #info-main .text-container .text-container__grid__single #weatherText {
+  font-size: 2rem;
 }
 #info-body #info-main .text-container .text-container__grid__dual .text-container__title,
 #info-body #info-main .text-container .text-container__grid__single .text-container__title {

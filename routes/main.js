@@ -31,6 +31,23 @@ router.get("/portal/window", (req, res) => {
         const city = "Charlotte";
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
+        // check if req exists
+        if (!data["window"]) {
+            // Set status code to not found and display message
+            return res.status(404).send("Object cannot be found");
+        }
+
+        const item = "window";
+
+        const amount = data["window"].length;
+        let format = "";
+
+        if (amount > 1) {
+            format = "text-container__grid__dual";
+        } else {
+            format = "text-container__grid__single";
+        }
+
         // Request API data then render API and Data object
         request(url, (err, response, body) => {
             if (err) {
@@ -47,7 +64,8 @@ router.get("/portal/window", (req, res) => {
                         error: "No weather data",
                     });
 
-                let weatherText = weather.main.temp;
+                let weatherText = "";
+
                 request(
                     `http://api.giphy.com/v1/gifs/search?q=window&limit=${gifLimit}&api_key=${gifApiKey}`,
                     (err, response, body) => {
@@ -57,14 +75,21 @@ router.get("/portal/window", (req, res) => {
                                 error: "Gif Not Found",
                             });
                         } else {
-                            // let gif = response.data[0].images.fixed_height.url;
-                            // console.log(response);
+                            if (weather.main.temp > 60) {
+                                weatherText = `It's currently ${weather.main.temp} degrees in Charlotte. Perfect time to open the window`;
+                            } else {
+                                weatherText = `It's currently ${weather.main.temp} degrees in Charlotte. Maybe not the best time to open the window...`;
+                            }
                             const gif = JSON.parse(body).data[gifIndex].images
                                 .original.url;
                             res.render("windowInfo", {
                                 weather: weatherText,
-                                gif: gif,
                                 data: data.window,
+                                gif: gif,
+                                title:
+                                    item.charAt(0).toUpperCase() +
+                                    item.slice(1, item.length),
+                                format: format,
                                 error: null,
                             });
                         }
@@ -115,6 +140,7 @@ router.get("/portal/:object", (req, res) => {
                             item.charAt(0).toUpperCase() +
                             item.slice(1, item.length),
                         format: format,
+                        error: null,
                     });
                 }
             }
