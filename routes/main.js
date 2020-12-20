@@ -20,10 +20,6 @@ router.get("/portal", (req, res) => {
     res.render("home");
 });
 
-router.get("/api", (req, res) => {
-    res.send(data);
-});
-
 // Window has a higher specificity to run this code on the window route instead of the :object route
 router.get("/portal/window", (req, res) => {
     try {
