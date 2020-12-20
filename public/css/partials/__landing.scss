@@ -84,6 +84,10 @@ $theme-colors: (
     display: grid;
     justify-items: center;
 
+    #landing-header__title {
+        margin-bottom: 7rem;
+    }
+
     #landing-header__button {
         text-align: center;
         padding: 1rem 3rem 1rem 3rem;
