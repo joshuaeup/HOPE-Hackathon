@@ -182,7 +182,7 @@ router.post("/portal/:object", (req, res) => {
         });
 
         // Render message
-        // res.render("info");
+        res.render("home");
     } catch (err) {
         console.log(err);
     }

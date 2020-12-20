@@ -120,13 +120,17 @@ $theme-colors: (
                         text-align: center;
                     }
 
+                    #submitBtn {
+                        text-align: center;
+                    }
+
                     /* Link is a state of the button. use pseudo classes for special states of a selector  */
                     .btn:link,
                     .btn:visited,
                     .btn {
                         text-transform: uppercase;
                         text-decoration: none;
-                        padding: 15px 40px;
+                        padding: 1rem 0;
                         display: inline-block;
                         border-radius: 100px;
                         /* By specifying transition: all .2s; you are stating that for all the transitions of class btn apply a .2s delay to display a smooth transition  */

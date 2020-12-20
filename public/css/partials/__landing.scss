@@ -19,8 +19,6 @@ $theme-colors: (
 
 #landing-body {
     background-color: map-get($map: $theme-colors, $key: background);
-    // background: #a18173;
-    // background: linear-gradient(to bottom, #47bfa2, #77d694);
 }
 
 /* Body  */
@@ -57,7 +55,6 @@ $theme-colors: (
 .info-container__title {
     color: map-get($map: $theme-colors, $key: title);
     width: 100%;
-    // color: white;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 3rem;
@@ -70,8 +67,7 @@ $theme-colors: (
 .info-container__column__text {
     color: black;
     padding: 0 0.3rem;
-    // color: rgba(255, 255, 255, 0.842);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .home-grid-container__column__bottomLine {
@@ -87,7 +83,6 @@ $theme-colors: (
     color: white;
     display: grid;
     justify-items: center;
-
 
     #landing-header__button {
         text-align: center;

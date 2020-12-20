@@ -26,8 +26,8 @@
                 </article>
                 <article id="form-container">
                     <div>
-                        <form method="POST" id="form" action="/portal/<%= title.toLowerCase() %>">
-                        <h2>Would you like an emailed list of these tips?</h2>
+                        <form method="POST" id="form" action="/portal/<%= title.toLowerCase() %>" >
+                        <h2 id="form-title">Would you like an emailed list of these tips?</h2>
                         <input type="email" name="email" placeholder="What's Your Email?" id="input" />
                         <input type="submit" value="Submit" id="submitBtn" class="btn btn-white" />
                     </form>

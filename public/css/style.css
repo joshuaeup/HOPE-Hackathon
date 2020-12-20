@@ -89,7 +89,7 @@ map area {
 .info-container__column__text {
   color: black;
   padding: 0 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .home-grid-container__column__bottomLine {
@@ -340,12 +340,15 @@ map area {
   border-bottom: 1px #bdbdbd solid;
   text-align: center;
 }
+#info-body #info-main #form-container div #form #submitBtn {
+  text-align: center;
+}
 #info-body #info-main #form-container div #form .btn:link,
 #info-body #info-main #form-container div #form .btn:visited,
 #info-body #info-main #form-container div #form .btn {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1rem 0;
   display: inline-block;
   border-radius: 100px;
   /* By specifying transition: all .2s; you are stating that for all the transitions of class btn apply a .2s delay to display a smooth transition  */
