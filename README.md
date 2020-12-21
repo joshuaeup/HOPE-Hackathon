@@ -29,6 +29,7 @@ $ npm start
 -   [Node](https://nodejs.org/en/docs/) - Development Environment
 -   [ExpressJS](https://expressjs.com/) - Backend Framework
 -   [EJS](https://ejs.co/) - Template Engine
+-   [SASS](https://sass-lang.com/guide) - CSS Extension
 
 ## API Used
 
