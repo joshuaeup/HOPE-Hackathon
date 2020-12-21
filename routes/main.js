@@ -161,6 +161,7 @@ router.post("/portal/:object", (req, res) => {
             ${data[item][i].info}
             `;
         }
+        // Mail Object
         const mail = {
             from: "Hope",
             to: email,
