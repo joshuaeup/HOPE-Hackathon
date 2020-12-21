@@ -1,4 +1,4 @@
-# HOPE-Hackathon
+# Quarantips
 
 The Quarantips Web Application was created to educate individuals who are working from home on the best practices they can utilize to make working from home, work for them! Within the Quarantips Portal, you can select different items around the room then you will be presented with many wonderful Tips on how to improve your Work From Home Mental Health.
 
