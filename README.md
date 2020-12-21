@@ -12,10 +12,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```
 # Clone this repository
-$ git clone https://github.com/joshuaeup/HOPE-Hackathon.git
+$ git clone https://github.com/joshuaeup/Quarantips.git
 
 # Go into the repository
-$ cd HOPE-Hackathon
+$ cd Quarantips
 
 # Install dependencies
 $ npm install
