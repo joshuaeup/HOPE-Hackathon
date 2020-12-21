@@ -3,10 +3,13 @@ const router = express.Router();
 const data = require("../data.json");
 // Transporter configurations
 const transporter = require("../config/transporter");
-
 const request = require("request");
+
+// API Keys
 const apiKey = "decf8780916542018d312ec3ef91935b";
 const gifApiKey = "LXPwL17v1pWKIxBUdVOv468Ss3LVvpBK";
+
+// Gif API guidelines
 const gifLimit = 2;
 const gifIndex = gifLimit - 1;
 
@@ -33,11 +36,14 @@ router.get("/portal/window", (req, res) => {
             return res.status(404).send("Object cannot be found");
         }
 
+        // Item variable
         const item = "window";
 
+        // Checks the length of the window object in the JSON file
         const amount = data["window"].length;
         let format = "";
 
+        // Passes in correct css style based on the length of the object
         if (amount > 1) {
             format = "text-container__grid__dual";
         } else {
@@ -46,6 +52,7 @@ router.get("/portal/window", (req, res) => {
 
         // Request API data then render API and Data object
         request(url, (err, response, body) => {
+            // Checks for error
             if (err) {
                 res.render("windowInfo", {
                     weather: null,
@@ -53,6 +60,7 @@ router.get("/portal/window", (req, res) => {
                     title: "Window",
                 });
             } else {
+                // Checks if weather is undefined for location
                 let weather = JSON.parse(body);
                 if (weather.main == undefined)
                     res.render("windowInfo", {
@@ -60,24 +68,30 @@ router.get("/portal/window", (req, res) => {
                         error: "No weather data",
                     });
 
+                // Sets weather text template to empty
                 let weatherText = "";
 
+                // Request GIF from API and passes in global variables
                 request(
                     `http://api.giphy.com/v1/gifs/search?q=window&limit=${gifLimit}&api_key=${gifApiKey}`,
                     (err, response, body) => {
+                        // Checks for error
                         if (err) {
                             res.render("info", {
                                 gif: null,
                                 error: "Gif Not Found",
                             });
                         } else {
+                            // conditional for weatherText
                             if (weather.main.temp > 60) {
                                 weatherText = `It's currently ${weather.main.temp} degrees in Charlotte. Perfect time to open the window`;
                             } else {
                                 weatherText = `It's currently ${weather.main.temp} degrees in Charlotte. Maybe not the best time to open the window...`;
                             }
+                            // Pulls GIF from API
                             const gif = JSON.parse(body).data[gifIndex].images
                                 .original.url;
+                            // Render to view
                             res.render("windowInfo", {
                                 weather: weatherText,
                                 data: data.window,
@@ -109,23 +123,27 @@ router.get("/portal/:object", (req, res) => {
             return res.status(404).send("Object cannot be found");
         }
 
+        // Checks the length of the window object in the JSON file
         const amount = data[item].length;
+        // Item variable
         let format = "";
 
+        // Passes in correct css style based on the length of the object
         if (amount > 1) {
             format = "text-container__grid__dual";
         } else {
             format = "text-container__grid__single";
         }
 
+        // Request GIF from API and passes in global variables
         request(
             `http://api.giphy.com/v1/gifs/search?q=${item}&limit=${gifLimit}&api_key=${gifApiKey}`,
             (err, response, body) => {
+                // Checks for error
                 if (err) {
                     res.render("info", { gif: null, error: "Gif Not Found" });
                 } else {
-                    // let gif = response.data[0].images.fixed_height.url;
-                    // console.log(response);
+                    // Pulls GIF from API
                     const gif = JSON.parse(body).data[gifIndex].images.original
                         .url;
                     // Send result to page
@@ -149,10 +167,12 @@ router.get("/portal/:object", (req, res) => {
 // Post method for email
 router.post("/portal/:object", (req, res) => {
     try {
+        // Grabs object from url param
         const item = req.params.object;
+        // Grab email from form
         const email = req.body.email;
+        // Formatted text variable that will have values appended
         let formattedText = "Here are your helpful tips! ";
-        console.log(item);
         // Loop through selected data then append object values within template literal
         for (let i = 0; i < data[item].length; i++) {
             let number = i + 1;
