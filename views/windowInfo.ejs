@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <style>
+            
+        </style>
+        <title>Tips</title>
+    </head>
+    <body id="info-body" class="overflow">
+        <header id="info-header">
+            <div class="header-col__logo">
+                <h1><%= title %></h1>
+            </div>
+
+            <div class="header-col__back">
+                <a href="/portal">Back To Portal</a>
+            </div>
+        </header>
+        <main id="info-main">
+            <div id="info-main__column">
+                <article class="gif-container">
+                    <img id="gif" src="<%= gif %>" alt="gif" />
+                </article>
+                <article id="form-container">
+                    <div>
+                        <form method="POST" id="form" action="/portal/<%= title.toLowerCase() %>" >
+                        <h2 id="form-title">Would you like an emailed list of these tips?</h2>
+                        <input type="email" name="email" placeholder="What's Your Email?" id="input" />
+                        <input type="submit" value="Submit" id="submitBtn" class="btn btn-white" />
+                    </form>
+                    </div>
+                </article>
+            </div>
+            <article class="text-container">
+                <div class="<%= format %>">
+                    <h3 id="text-container__main-title">Helpful Tips</h3>
+                <h1 id="weatherText"><%= weather %></h1>
+                    <% for(let i = 0; i < data.length; i++) { %>
+                        <div class="text-body">
+                            <h4 class="text-container__title"><%= i + 1 %>. <%= data[i].title %></h3>
+                            <p class="text-container__text"><%= data[i].info %></p>
+                        </div>
+                    <% } %>
+                </div>
+            </article>
+        </main>
+        <footer class="footer-container" style="grid-template-columns: 1fr;">
+            <div class="footer-container__column">
+                <div class="footer-container__row__social">
+                    <a
+                        href="https://www.youtube.com/"
+                        class="footer-social__icon__link"
+                        ><i class="footer-social__icon fab fa-youtube"></i
+                    ></a>
+                    <a
+                        href="https://www.instagram.com/"
+                        class="footer-social__icon__link"
+                        ><i class="footer-social__icon fab fa-instagram"></i
+                    ></a>
+                    <a
+                        href="https://twitter.com/home"
+                        class="footer-social__icon__link"
+                        ><i class="footer-social__icon fab fa-twitter"></i
+                    ></a>
+                </div>
+                <div class="footer-container__row">
+                    <a
+                        class="footer-link"
+                        href="https://www.mentalhealth.gov/basics/what-is-mental-health"
+                        >Info</a
+                    >
+                    <a
+                        class="footer-link"
+                        href="https://github.com/joshuaeup/HOPE-Hackathon/blob/main/README.md"
+                        >About</a
+                    >
+                    <a
+                        class="footer-link"
+                        href="https://www.forbes.com/sites/chriswestfall/2020/10/08/mental-health-leadership-survey-reveals-80-of-remote-workers-would-quit-their-jobs-for-this/?sh=7970fc203a0f"
+                        >Stats</a
+                    >
+                </div>
+                <div class="footer-container__row__dual">
+                    <a
+                        class="footer-link"
+                        href="https://github.com/joshuaeup/HOPE-Hackathon"
+                        >Repository</a
+                    >
+                    <a
+                        class="footer-link"
+                        href="https://www.mentalhealthexcellence.org/donate/?from=11205&gclid=Cj0KCQiA5vb-BRCRARIsAJBKc6IOeG2Kr7Sl1lb28QFc4mZfp8gpAZuW5wbN69DqIx7k-vfxdQ-VxlQaAn5JEALw_wcB"
+                        >Support</a
+                    >
+                </div>
+                <div class="footer-container__row__copyright">
+                    <p class="footer-link__copyright">&copy; 2020 Quarantips</p>
+                </div>
+            </div>
+        </footer>
+        <script src="/js/info.js"></script>
+        <script src="https://kit.fontawesome.com/3cf526719d.js"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
+

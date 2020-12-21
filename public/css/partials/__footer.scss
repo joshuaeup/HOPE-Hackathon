@@ -1,0 +1,96 @@
+$theme-colors: (
+    "border": #ffffff,
+    "background": #fbfbfd,
+    "hr": gray,
+    "title": #418a99,
+    "text": #212122,
+    "column": #f0f0f0,
+);
+
+/* Footer */
+.footer-container {
+    background-color: #2b2b2b;
+    padding: 3rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.footer-container__column {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-container .footer-container__row,
+.footer-container__row__social,
+.footer-container__row__dual,
+.footer-container__row__launch {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 1rem;
+    color: map-get($map: $theme-colors, $key: border);
+
+    .footer-link,
+    .footer-link__copyright {
+        text-decoration: none;
+        color: map-get($map: $theme-colors, $key: border);
+        font-size: 1.5rem;
+    }
+}
+.footer-link__copyright {
+    text-align: center;
+    color: rgb(128, 128, 128);
+}
+
+.footer-container__row__social {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-container__row__dual {
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-container__row__copyright {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+}
+.footer-container
+    .footer-container__row
+    .footer-social__icon__link
+    .footer-social__icon {
+    font-size: 2rem;
+}
+
+.footer-social__icon__link {
+    background-color: white;
+    height: 4rem;
+    width: 4rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+
+    i {
+        color: #2b2b2b;
+    }
+}
+.footer-container__row__launch {
+    grid-template-columns: 1fr;
+}
+
+#landing-footer__button {
+    text-align: center;
+    padding: 1rem 3rem 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #418a99;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}

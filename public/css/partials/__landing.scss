@@ -1,0 +1,141 @@
+$theme-colors: (
+    "border": #ffffff,
+    "background": #fbfbfd,
+    "hr": gray,
+    "title": #418a99,
+);
+
+#landing-header {
+    height: 100vh;
+    background: linear-gradient(rgba(46, 46, 46, 0.5), rgba(46, 46, 46, 0.5)),
+        url("/images/staticBackground.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#landing-body {
+    background-color: map-get($map: $theme-colors, $key: background);
+}
+
+/* Body  */
+
+.info-container {
+    text-align: center;
+    padding: 2em 0 0 0;
+}
+
+.info-container__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.reversedRow {
+    border-top: map-get($map: $theme-colors, $key: border) solid 1rem;
+    border-bottom: map-get($map: $theme-colors, $key: border) solid 1rem;
+}
+
+.info-container__column {
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.info-container__column__img {
+    height: auto;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.info-container__column__title,
+.info-container__title {
+    color: map-get($map: $theme-colors, $key: title);
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.info-container__title {
+    font-size: 4rem;
+}
+
+.info-container__column__text {
+    color: black;
+    padding: 0 0.3rem;
+    font-size: 1.7rem;
+}
+
+.home-grid-container__column__bottomLine {
+    height: 0.1rem;
+    background-color: map-get($map: $theme-colors, $key: hr);
+    width: 100%;
+    border: none;
+    margin: 1rem 0;
+}
+
+#landing-header__title__container {
+    font-size: 5rem;
+    color: white;
+    display: grid;
+    justify-items: center;
+
+    #landing-header__title {
+        margin-bottom: 7rem;
+    }
+
+    #landing-header__button {
+        text-align: center;
+        padding: 1rem 3rem 1rem 3rem;
+        font-size: 2rem;
+        border: none;
+        border-radius: 2rem;
+        background-color: #418a99;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+#landing-header__tiny {
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+#down-arrow-wrapper {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    animation-name: bounce;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 2em;
+    }
+
+    50% {
+        bottom: 2.8em;
+    }
+
+    100% {
+        bottom: 2em;
+    }
+}
+
+.down-arrow {
+    width: auto;
+    height: 3em;
+}
